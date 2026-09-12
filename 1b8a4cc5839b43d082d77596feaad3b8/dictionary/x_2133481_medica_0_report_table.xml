@@ -5,6 +5,13 @@
         <element label="Appointment" max_length="32" name="appointment" reference="x_2133481_medica_0_appointment_table" type="reference"/>
         <element label="Report Date" max_length="255" name="report_date" type="glide_date_time"/>
         <element label="Verified By" max_length="32" name="verified_by" reference="sys_user" type="reference"/>
+        <element choice="1" default="Processing" label="Status" max_length="255" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Processing" sequence="0" value="Processing"/>
+                <element inactive_on_update="false" label="Ready" sequence="1" value="Ready"/>
+                <element inactive_on_update="false" label="Delivered" sequence="2" value="Delivered"/>
+            </choice>
+        </element>
         <element label="Patient" max_length="32" name="patient" reference="x_2133481_medica_0_patient" type="reference"/>
         <index name="index">
             <element name="appointment"/>

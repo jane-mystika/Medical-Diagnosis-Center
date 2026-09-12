@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="gender" table="x_2133481_medica_0_patient">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="status" table="x_2133481_medica_0_report_table">
         <active>true</active>
         <array>false</array>
         <attributes/>
         <audit>false</audit>
         <calculation/>
-        <choice>3</choice>
+        <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Gender</column_label>
+        <column_label>Status</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>Processing</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -21,7 +21,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>gender</element>
+        <element>status</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -30,7 +30,7 @@
         <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
         <max_length>255</max_length>
-        <name>x_2133481_medica_0_patient</name>
+        <name>x_2133481_medica_0_report_table</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -47,14 +47,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-09-11 09:14:04</sys_created_on>
-        <sys_name>Gender</sys_name>
+        <sys_created_on>2026-09-12 06:10:42</sys_created_on>
+        <sys_name>Status</sys_name>
         <sys_package display_value="Medical Diagnosis Center" source="x_2133481_medica_0">1b8a4cc5839b43d082d77596feaad3b8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Medical Diagnosis Center">1b8a4cc5839b43d082d77596feaad3b8</sys_scope>
-        <sys_update_name>sys_dictionary_x_2133481_medica_0_patient_gender</sys_update_name>
+        <sys_update_name>sys_dictionary_x_2133481_medica_0_report_table_status</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-09-12 05:38:48</sys_updated_on>
+        <sys_updated_on>2026-09-12 06:12:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

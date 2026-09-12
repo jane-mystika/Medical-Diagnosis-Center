@@ -4,27 +4,27 @@
             <element>patient</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>165df041835383d082d77596feaad335</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>0b67d91d83d307d082d77596feaad301</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>report_number</element>
+            <element>status</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>925df041835383d082d77596feaad336</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>9767d91d83d307d082d77596feaad302</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>findings</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>125df041835383d082d77596feaad337</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>1767d91d83d307d082d77596feaad303</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>9e5df041835383d082d77596feaad337</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>9367d91d83d307d082d77596feaad304</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>appointment</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>1e5df041835383d082d77596feaad338</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>1367d91d83d307d082d77596feaad305</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>report_date</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>9a5df041835383d082d77596feaad339</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>9f67d91d83d307d082d77596feaad305</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>verified_by</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:38:19</sys_created_on>
-            <sys_id>1a5df041835383d082d77596feaad33a</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>1f67d91d83d307d082d77596feaad306</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:38:19</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>number</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-09-11 09:40:13</sys_created_on>
-            <sys_id>9ecd7081835383d082d77596feaad35c</sys_id>
+            <sys_created_on>2026-09-12 06:10:43</sys_created_on>
+            <sys_id>9b67d91d83d307d082d77596feaad307</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2133481_medica_0_report_table" sys_domain="global" view="Default view">3da8f4c5831383d082d77596feaad3ea</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-11 09:40:13</sys_updated_on>
+            <sys_updated_on>2026-09-12 06:10:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
