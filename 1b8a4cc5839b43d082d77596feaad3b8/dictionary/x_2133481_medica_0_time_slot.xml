@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="8d5db495831307d082d77596feaad3b9" label=" TIME SLOT" max_length="40" name="x_2133481_medica_0_time_slot" type="collection">
+        <element label="end_time" max_length="255" name="end_time" type="glide_time"/>
+        <element label="current_bookings" max_length="255" name="current_bookings" type="integer"/>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element display="true" label="start_time" max_length="255" name="start_time" type="glide_time"/>
+        <element label="max_capacity" max_length="255" name="max_capacity" type="integer"/>
+    </element>
+</database>

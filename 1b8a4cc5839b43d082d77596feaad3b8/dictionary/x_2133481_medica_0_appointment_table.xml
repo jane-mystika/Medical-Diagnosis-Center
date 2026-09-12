@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="d3549cc983db43d082d77596feaad39b" label="APPOINTMENT TABLE" max_length="40" name="x_2133481_medica_0_appointment_table" type="collection">
+        <element label="Total Amount" max_length="20" name="total_amount" type="currency"/>
+        <element choice="1" label="Approval Status" max_length="255" name="approval_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="Approved"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="Cancelled"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="Pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="Rejected"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="Completed"/>
+            </choice>
+        </element>
+        <element label="Scheduled Date" max_length="255" name="scheduled_date" type="glide_date_time"/>
+        <element label="Notes" max_length="4000" name="notes" type="string"/>
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <element label="Refund Amount" max_length="20" name="refund_amount" type="currency"/>
+        <element label="Confirmation Sent" max_length="40" name="confirmation_sent" type="boolean"/>
+        <element display="true" label="Slot Time" max_length="32" name="slot_time" reference="x_2133481_medica_0_time_slot" type="reference"/>
+        <element label="Rejection Reason" max_length="4000" name="rejection_reason" type="string"/>
+        <element choice="1" label="Status" max_length="255" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Scheduled" sequence="0" value="Scheduled"/>
+                <element inactive_on_update="false" label="InProgress" sequence="3" value="InProgress"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="1" value="Confirmed"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="Completed"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="Cancelled"/>
+            </choice>
+        </element>
+        <element choice="1" label="Payment Status" max_length="255" name="payment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Failed" sequence="2" value="Failed"/>
+                <element inactive_on_update="false" label="Refunded" sequence="3" value="Refunded"/>
+                <element inactive_on_update="false" label="Paid" sequence="1" value="Paid"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="Pending"/>
+            </choice>
+        </element>
+        <element label="Patient" max_length="32" name="patient" reference="x_2133481_medica_0_patient" type="reference"/>
+        <element label="Appointment Number" max_length="40" name="appointment_number" type="string"/>
+        <element label="Approved By" max_length="32" name="approved_by" reference="sys_user" type="reference"/>
+        <element label="Approval Date" max_length="255" name="approval_date" type="glide_date_time"/>
+        <element label="Test" max_length="32" name="test" reference="x_2133481_medica_0_diagnostic_test" type="reference"/>
+        <element label="Created By" max_length="32" name="created_by" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approved_by"/>
+        </index>
+        <index name="index2">
+            <element name="created_by"/>
+        </index>
+        <index name="index3">
+            <element name="patient"/>
+        </index>
+        <index name="index4">
+            <element name="slot_time"/>
+        </index>
+        <index name="index5">
+            <element name="test"/>
+        </index>
+    </element>
+</database>

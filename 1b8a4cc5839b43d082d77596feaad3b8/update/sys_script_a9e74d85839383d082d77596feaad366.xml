@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2133481_medica_0_appointment_table</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>AutoCreate Report on AppointmentComplete</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    try {
+        // Only run when status just changed to 'completed'
+        if (current.status != 'completed' || previous.status == 'completed') {
+            return;
+        }
+
+        // Check if report already exists for this appointment
+        var existingReport = new GlideRecord('x_2133481_medica_0_report_table');
+        existingReport.addQuery('appointment', current.getUniqueValue());
+        existingReport.setLimit(1);
+        existingReport.query();
+        if (existingReport.next()) {
+            gs.info('Report already exists for appointment ' + current.getUniqueValue());
+            return;
+        }
+
+        // Get test details for findings generation
+        var testName = '';
+        var testCategory = '';
+        var testCode = '';
+        if (current.test) {
+            var testRef = current.test.getRefRecord();
+            if (testRef) {
+                testName = testRef.getValue('test_name') || '';
+                testCategory = testRef.getValue('category') || '';
+                testCode = testRef.getValue('test_code') || '';
+            }
+        }
+
+        var findings = generateRealisticFindings(testName, testCategory, testCode);
+
+        // Create report record — number auto-populates via Number Maintenance, don't set it
+        var reportGr = new GlideRecord('x_2133481_medica_0_report_table');
+        reportGr.initialize();
+        reportGr.setValue('appointment', current.getUniqueValue());
+        reportGr.setValue('patient', current.getValue('patient'));
+        reportGr.setValue('report_date', new GlideDateTime());
+        reportGr.setValue('findings', findings);
+        // verified_by intentionally left blank — set manually by a lab technician when verified
+        var newReportId = reportGr.insert();
+
+        if (newReportId) {
+            gs.info('AUTO-CREATED report for appointment ' + current.getUniqueValue());
+        }
+    } catch (e) {
+        gs.error('Auto Report Creation Error: ' + e.message);
+    }
+
+    function generateRealisticFindings(testName, category, code) {
+        var testLower = (testName || '').toLowerCase();
+        var catLower = (category || '').toLowerCase();
+
+        if (testLower.indexOf('blood') !== -1 || testLower.indexOf('cbc') !== -1 || catLower.indexOf('blood') !== -1) {
+            return '<div style="font-family:Arial,sans-serif;"><h3 style="color:#1f2937;border-bottom:2px solid #10b981;padding-bottom:8px;">Complete Blood Count (CBC) Report</h3><p style="color:#374151;">All blood parameters are within normal reference ranges. No abnormalities detected.</p><p style="color:#6b7280;font-size:13px;"><em>Report generated on ' + new GlideDateTime().getDisplayValue() + '</em></p></div>';
+        } else if (testLower.indexOf('urine') !== -1 || catLower.indexOf('urine') !== -1) {
+            return '<div style="font-family:Arial,sans-serif;"><h3 style="color:#1f2937;border-bottom:2px solid #10b981;padding-bottom:8px;">Urinalysis Report</h3><p style="color:#374151;">Urinalysis results are within normal limits. No signs of infection, diabetes, or kidney dysfunction detected.</p><p style="color:#6b7280;font-size:13px;"><em>Report generated on ' + new GlideDateTime().getDisplayValue() + '</em></p></div>';
+        } else if (testLower.indexOf('x-ray') !== -1 || catLower.indexOf('radiology') !== -1) {
+            return '<div style="font-family:Arial,sans-serif;"><h3 style="color:#1f2937;border-bottom:2px solid #10b981;padding-bottom:8px;">Chest X-Ray Report</h3><p style="color:#374151;">Normal chest radiograph. No acute cardiopulmonary disease.</p><p style="color:#6b7280;font-size:13px;"><em>Report generated on ' + new GlideDateTime().getDisplayValue() + '</em></p></div>';
+        } else {
+            return '<div style="font-family:Arial,sans-serif;"><h3 style="color:#1f2937;border-bottom:2px solid #10b981;padding-bottom:8px;">' + testName + ' - Test Report</h3><p style="color:#374151;">Test completed successfully. All measured parameters within acceptable clinical ranges.</p><p style="color:#6b7280;font-size:13px;"><em>Report generated on ' + new GlideDateTime().getDisplayValue() + '</em></p></div>';
+        }
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 10:35:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a9e74d85839383d082d77596feaad366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AutoCreate Report on AppointmentComplete</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Medical Diagnosis Center" source="x_2133481_medica_0">1b8a4cc5839b43d082d77596feaad3b8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Medical Diagnosis Center">1b8a4cc5839b43d082d77596feaad3b8</sys_scope>
+        <sys_update_name>sys_script_a9e74d85839383d082d77596feaad366</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 10:35:06</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=a9e74d85839383d082d77596feaad366"/>
+</record_update>
